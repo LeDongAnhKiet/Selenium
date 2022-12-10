@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-driv = webdriver.Chrome(executable_path='vnev/chromedriver')
+driv = webdriver.Chrome(executable_path='chromedriver.exe')
 driv.get('https://www.google.com')
 s = input('Nhập: ')
 ctrl = driv.find_element(By.NAME, 'q')
@@ -14,7 +14,7 @@ for r in res:
     t = r.find_element(By.TAG_NAME, 'a').text
     l = r.find_element(By.TAG_NAME, 'a').get_attribute('href')
     a += 1
-    print(t + '\n' + l + '\n\n')
+    print(t + '\n' + l + '\n')
     if a > 5:
         break
 
